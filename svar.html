@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Svar · Viktoria & Håvard</title>
+  <meta name="description" content="Gi beskjed om du kommer i bryllupet til Viktoria og Håvard.">
+  <meta name="theme-color" content="#f6f2eb">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Great+Vibes&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===================== Toppmeny ===================== -->
+  <header class="toppmeny">
+    <div class="rad">
+      <a class="logo-lenke" href="index.html" aria-label="Til forsiden"><svg class="logo" viewBox="0 0 100 100" overflow="visible" role="img" aria-label="Viktoria og Håvard"><text class="logo-v" x="40" y="60" text-anchor="middle">V</text><text class="logo-h" x="60" y="72" text-anchor="middle">H</text></svg></a>
+      <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="hovedmeny">Meny</button>
+      <nav class="hovedmeny" id="hovedmeny" aria-label="Hovedmeny">
+        <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="dagen.html">Dagen</a></li>
+        <li><a href="grillfest.html">Grillfest</a></li>
+        <li><a href="historie.html">Noen glimt</a></li>
+        <li><a href="onskeliste.html">Ønskeliste</a></li>
+        <li><a href="svar.html" aria-current="page">Svar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== Toppbilde ===================== -->
+  <header class="undertopp" style="--pos: 50% 45%">
+    <img src="assets/bilder/topp-svar.jpg" alt="Viktoria og Håvard holder hender foran et murhus med blomster" fetchpriority="high">
+    <div class="undertopp-tekst">
+      <p class="eyebrow">Svar innen 1. januar 2027</p>
+      <h1>Viktoria <span class="og">&amp;</span> Håvard</h1>
+    </div>
+  </header>
+
+  <!-- ===================== Innhold ===================== -->
+  <main>
+    <section class="seksjon krem">
+      <div class="smal">
+        <div class="kort stabel vis">
+          <p class="eyebrow gull">Svar innen 1. januar 2027</p>
+          <h2 class="skrifttittel">Kommer du?</h2>
+          <p class="ingress">Gi beskjed om du/dere kommer, og fortell oss om allergier eller andre hensyn.</p>
+          <div class="svarknapper">
+            <button class="knapp fylt stor" type="button" id="svar-ja">Jeg kommer!</button>
+            <button class="knapp stor" type="button" id="svar-nei">Kan dessverre ikke</button>
+          </div>
+          <p class="svarmelding" id="melding-ja" aria-live="polite">
+            Så gøy! Vi gleder oss til å feire med deg.
+            <span id="skjema-hint" hidden><br>Svarskjemaet åpnes i en ny fane – fyll det ut, så har vi alt vi trenger.</span>
+            <span id="ingen-skjema"><br>Svarskjemaet kommer snart. Send oss gjerne en melding i mellomtiden.</span>
+          </p>
+          <p class="svarmelding" id="melding-nei" aria-live="polite">Så synd! Gi oss gjerne beskjed på telefon, så vi vet det.</p>
+
+          <hr class="strek">
+          <p>Du kan også svare direkte til oss</p>
+          <div class="telefoner">
+            <a class="knapp" href="tel:+4740540150">Viktoria · 405 40 150</a>
+            <a class="knapp" href="tel:+4797435692">Håvard · 974 35 692</a>
+          </div>
+          <p style="margin-top: 1rem; color: var(--dempet)">Mer informasjon kommer på <a data-lenke="facebook" href="#">Facebook</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Bunntekst ===================== -->
+  <footer class="bunntekst">
+    <p class="gleder">Vi gleder oss!</p>
+    <p class="eyebrow">Viktoria &amp; Håvard · 03.07.2027</p>
+    <nav class="bunnmeny" aria-label="Bunnmeny">
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="dagen.html">Dagen</a></li>
+        <li><a href="grillfest.html">Grillfest</a></li>
+        <li><a href="historie.html">Noen glimt</a></li>
+        <li><a href="onskeliste.html">Ønskeliste</a></li>
+        <li><a href="svar.html" aria-current="page">Svar</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Grillfest · Viktoria & Håvard</title>
+  <meta name="description" content="Grillfest fredag 2. juli 2027 – vi varmer opp til bryllupet.">
+  <meta name="theme-color" content="#f6f2eb">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Great+Vibes&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===================== Toppmeny ===================== -->
+  <header class="toppmeny">
+    <div class="rad">
+      <a class="logo-lenke" href="index.html" aria-label="Til forsiden"><svg class="logo" viewBox="0 0 100 100" overflow="visible" role="img" aria-label="Viktoria og Håvard"><text class="logo-v" x="40" y="60" text-anchor="middle">V</text><text class="logo-h" x="60" y="72" text-anchor="middle">H</text></svg></a>
+      <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="hovedmeny">Meny</button>
+      <nav class="hovedmeny" id="hovedmeny" aria-label="Hovedmeny">
+        <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="dagen.html">Dagen</a></li>
+        <li><a href="grillfest.html" aria-current="page">Grillfest</a></li>
+        <li><a href="historie.html">Noen glimt</a></li>
+        <li><a href="onskeliste.html">Ønskeliste</a></li>
+        <li><a href="svar.html">Svar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== Toppbilde ===================== -->
+  <header class="undertopp" style="--pos: 50% 60%">
+    <img src="assets/bilder/topp-grillfest.jpg" alt="Viktoria og Håvard sitter i gresset foran et blomsterbed og ler" fetchpriority="high">
+    <div class="undertopp-tekst">
+      <p class="eyebrow">Grillfest · fredag 2. juli 2027</p>
+      <h1>Viktoria <span class="og">&amp;</span> Håvard</h1>
+    </div>
+  </header>
+
+  <!-- ===================== Innhold ===================== -->
+  <main>
+    <section class="seksjon krem">
+      <div class="smal">
+        <div class="kort stabel vis">
+          <p class="eyebrow gull">Dagen før</p>
+          <h2 class="skrifttittel">Vi varmer opp</h2>
+          <p class="ingress">Bli med og start bryllupshelgen sammen med oss!</p>
+          <div class="info">
+            <strong>Fredag 2. juli 2027, kl. 18:00</strong>
+            <span>Totlandsveien 100, Nesttun</span>
+          </div>
+          <a class="knapp fylt" href="https://www.google.com/maps/search/?api=1&amp;query=Totlandsvegen+100%2C+5226+Nesttun" target="_blank" rel="noopener">Åpne i Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seksjon papir">
+      <div class="innhold">
+        <div class="seksjon-hode vis">
+          <p class="eyebrow gull">Finn frem</p>
+          <h2 class="skrifttittel">Kart</h2>
+        </div>
+        <div class="kart-ramme vis">
+          <div class="kart" data-kart="grill" data-zoom="14" role="region" aria-label="Kart over Totlandsveien 100 på Nesttun"></div>
+        </div>
+        <p class="kart-hint">Klikk i kartet for å zoome med musehjulet.</p>
+      </div>
+    </section>
+
+    <section class="seksjon krem">
+      <div class="innhold">
+        <div class="to-bilder vis">
+          <img src="assets/bilder/grillfest-1.jpg" alt="Håvard hvisker noe til Viktoria, som smiler" loading="lazy">
+          <img src="assets/bilder/grillfest-2.jpg" alt="Håvard kysser Viktoria i pannen" loading="lazy">
+        </div>
+        <div class="knapper vis" style="margin-top: 3rem">
+          <a class="knapp" href="dagen.html">Se programmet for bryllupsdagen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Bunntekst ===================== -->
+  <footer class="bunntekst">
+    <p class="gleder">Vi gleder oss!</p>
+    <p class="eyebrow">Viktoria &amp; Håvard · 03.07.2027</p>
+    <nav class="bunnmeny" aria-label="Bunnmeny">
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="dagen.html">Dagen</a></li>
+        <li><a href="grillfest.html" aria-current="page">Grillfest</a></li>
+        <li><a href="historie.html">Noen glimt</a></li>
+        <li><a href="onskeliste.html">Ønskeliste</a></li>
+        <li><a href="svar.html">Svar</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="assets/leaflet/leaflet.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

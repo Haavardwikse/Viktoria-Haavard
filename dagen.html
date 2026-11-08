@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bryllupsdagen · Viktoria & Håvard</title>
+  <meta name="description" content="Program og kart for bryllupsdagen lørdag 3. juli 2027.">
+  <meta name="theme-color" content="#f6f2eb">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Great+Vibes&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===================== Toppmeny ===================== -->
+  <header class="toppmeny">
+    <div class="rad">
+      <a class="logo-lenke" href="index.html" aria-label="Til forsiden"><svg class="logo" viewBox="0 0 100 100" overflow="visible" role="img" aria-label="Viktoria og Håvard"><text class="logo-v" x="40" y="60" text-anchor="middle">V</text><text class="logo-h" x="60" y="72" text-anchor="middle">H</text></svg></a>
+      <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="hovedmeny">Meny</button>
+      <nav class="hovedmeny" id="hovedmeny" aria-label="Hovedmeny">
+        <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="dagen.html" aria-current="page">Dagen</a></li>
+        <li><a href="grillfest.html">Grillfest</a></li>
+        <li><a href="historie.html">Noen glimt</a></li>
+        <li><a href="onskeliste.html">Ønskeliste</a></li>
+        <li><a href="svar.html">Svar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== Toppbilde ===================== -->
+  <header class="undertopp" style="--pos: 50% 62%">
+    <img src="assets/bilder/topp-dagen.jpg" alt="Viktoria og Håvard kysser med fargerike bygårder i Bergen i bakgrunnen" fetchpriority="high">
+    <div class="undertopp-tekst">
+      <p class="eyebrow">Bryllupsdagen · lørdag 3. juli 2027</p>
+      <h1>Viktoria <span class="og">&amp;</span> Håvard</h1>
+    </div>
+  </header>
+
+  <!-- ===================== Innhold ===================== -->
+  <main>
+    <section class="seksjon krem">
+      <div class="innhold">
+        <div class="seksjon-hode vis">
+          <p class="eyebrow gull">Lørdag 3. juli 2027</p>
+          <h2 class="skrifttittel">Programmet</h2>
+        </div>
+        <div class="program">
+          <article class="post vis">
+            <div class="post-bilde"><img src="assets/bilder/dagen-vielse.jpg" alt="Viktoria og Håvard holder hender på en gammel jernbro" loading="lazy"></div>
+            <div class="post-tekst">
+              <p class="post-tid">12:30</p>
+              <p class="eyebrow">Vielse</p>
+              <h3>Åsane gamle kirke</h3>
+              <address>Åsane, Bergen</address>
+              <a class="knapp" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%85sane+gamle+kirke%2C+Bergen" target="_blank" rel="noopener">Åpne i Google Maps</a>
+            </div>
+          </article>
+          <article class="post vis">
+            <div class="post-bilde"><img src="assets/bilder/dagen-fest.jpg" alt="Viktoria og Håvard omfavner hverandre foran et oransje hus" loading="lazy"></div>
+            <div class="post-tekst">
+              <p class="post-tid">16:00</p>
+              <p class="eyebrow">Fest</p>
+              <h3>Credo kirken</h3>
+              <address>Øvre Kråkenes 49<br>5152 Bønes</address>
+              <a class="knapp" href="https://www.google.com/maps/search/?api=1&amp;query=Credo+kirken%2C+%C3%98vre+Kr%C3%A5kenes+49%2C+5152+B%C3%B8nes" target="_blank" rel="noopener">Åpne i Google Maps</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seksjon papir" id="kart">
+      <div class="innhold">
+        <div class="seksjon-hode vis">
+          <p class="eyebrow gull">Finn frem</p>
+          <h2 class="skrifttittel">Kart</h2>
+        </div>
+        <div class="kart-ramme vis">
+          <div class="kart" data-kart="vielse fest" role="region" aria-label="Kart over Åsane gamle kirke og Credo kirken"></div>
+        </div>
+        <div class="knapper vis">
+          <a class="knapp fylt" href="https://www.google.com/maps/dir/?api=1&amp;origin=%C3%85sane+gamle+kirke%2C+Bergen&amp;destination=%C3%98vre+Kr%C3%A5kenes+49%2C+5152+B%C3%B8nes" target="_blank" rel="noopener">Veibeskrivelse fra kirken til festen</a>
+        </div>
+        <p class="kart-hint">Klikk i kartet for å zoome med musehjulet.</p>
+      </div>
+    </section>
+
+    <section class="banner" aria-label="Taler og innslag" style="--pos: 50% 40%">
+      <img src="assets/bilder/banner-taler.jpg" alt="Viktoria sitter på ryggen til Håvard og vinker med ringen" loading="lazy">
+      <div class="tekst">
+        <p class="eyebrow">Under festen</p>
+        <h2>Taler og innslag</h2>
+      </div>
+    </section>
+
+    <section class="seksjon krem">
+      <div class="innhold">
+        <div class="seksjon-hode vis">
+          <p class="eyebrow gull">Kontakt</p>
+          <h2 class="skrifttittel">Toastmastere</h2>
+          <p class="ingress">Ønsker du å holde tale eller ha et innslag? Si ifra til en av toastmasterne våre.</p>
+        </div>
+        <div class="kortrad">
+          <div class="kort person vis">
+            <p class="eyebrow">Toastmaster</p>
+            <h3>Andreas Rosvold</h3>
+            <a class="knapp" href="tel:+4794887341">Ring 948 87 341</a>
+          </div>
+          <div class="kort person vis">
+            <p class="eyebrow">Toastmaster</p>
+            <h3>Ruben Gustavsen</h3>
+            <a class="knapp" href="tel:+4746969657">Ring 469 69 657</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seksjon papir">
+      <div class="smal">
+        <div class="kort stabel vis">
+          <p class="eyebrow gull">Fredag 2. juli · 18:00</p>
+          <h2 class="skrifttittel">Grillfest</h2>
+          <p class="ingress">Vi varmer opp dagen før. Bli med og start bryllupshelgen sammen med oss!</p>
+          <a class="knapp" href="grillfest.html" style="margin-top: .6rem">Les om grillfesten</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Bunntekst ===================== -->
+  <footer class="bunntekst">
+    <p class="gleder">Vi gleder oss!</p>
+    <p class="eyebrow">Viktoria &amp; Håvard · 03.07.2027</p>
+    <nav class="bunnmeny" aria-label="Bunnmeny">
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="dagen.html" aria-current="page">Dagen</a></li>
+        <li><a href="grillfest.html">Grillfest</a></li>
+        <li><a href="historie.html">Noen glimt</a></li>
+        <li><a href="onskeliste.html">Ønskeliste</a></li>
+        <li><a href="svar.html">Svar</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="assets/leaflet/leaflet.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
