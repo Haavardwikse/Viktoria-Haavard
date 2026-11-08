@@ -23,6 +23,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+[id] { scroll-margin-top: calc(var(--meny-h) + .5rem); }
 body {
   margin: 0;
   background: var(--krem);
@@ -122,7 +123,7 @@ a.snart { cursor: not-allowed; opacity: .55; }
   transition: background .35s, color .35s, box-shadow .35s;
 }
 .toppmeny .rad { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: min(1320px, 100% - 2.5rem); margin-inline: auto; }
-.toppmeny.fast { background: rgba(246, 242, 235, .96); color: var(--tekst); text-shadow: none; box-shadow: 0 6px 24px -18px rgba(0,0,0,.5); backdrop-filter: blur(6px); }
+.toppmeny.fast { background: var(--krem); color: var(--tekst); text-shadow: none; box-shadow: 0 6px 24px -18px rgba(0,0,0,.5); }
 
 .logo-lenke { display: inline-flex; text-decoration: none; position: relative; z-index: 2; }
 .logo { width: 4.4rem; height: 4.4rem; overflow: visible; transition: transform .35s ease; }

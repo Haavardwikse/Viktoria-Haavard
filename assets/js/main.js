@@ -53,15 +53,27 @@ function meny() {
 /* ---------- Scroll: fast meny, parallakse, tidslinjefyll ---------- */
 function scrolling() {
   const topp = document.querySelector(".toppmeny");
+  const toppbilde = document.querySelector(".hero, .undertopp");
   const bannere = [...document.querySelectorAll(".banner > img")];
   const linje = document.querySelector(".tidslinje");
   const fyll = document.querySelector(".tidslinje-fyll");
   let venter = false;
 
+  function rullet() {
+    return window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+  }
+
   function oppdater() {
     venter = false;
     const h = window.innerHeight;
-    if (topp) topp.classList.toggle("fast", window.scrollY > h / 2);
+    if (topp) {
+      // Fast (krem) meny når man har scrollet over halv skjermhøyde,
+      // eller så snart menyen ikke lenger ligger over toppbildet.
+      let fast = rullet() > h / 2;
+      if (toppbilde) fast = fast || toppbilde.getBoundingClientRect().bottom <= topp.offsetHeight;
+      else fast = true;
+      topp.classList.toggle("fast", fast);
+    }
     if (!ROLIG) {
       bannere.forEach(img => {
         const r = img.parentElement.getBoundingClientRect();
@@ -79,9 +91,15 @@ function scrolling() {
     }
   }
   const be = () => { if (!venter) { venter = true; requestAnimationFrame(oppdater); } };
-  window.addEventListener("scroll", be, { passive: true });
-  window.addEventListener("resize", be);
+  ["scroll", "resize", "orientationchange", "load", "pageshow", "hashchange"].forEach(t =>
+    window.addEventListener(t, be, { passive: true }));
+  if (window.visualViewport) window.visualViewport.addEventListener("resize", be);
+  // Reserve: fanger opp scrolling som ikke sender scroll-hendelser (gjenoppretting, ankre, iOS)
+  if (toppbilde && "IntersectionObserver" in window) {
+    new IntersectionObserver(be, { threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] }).observe(toppbilde);
+  }
   oppdater();
+  setTimeout(oppdater, 250);
 }
 
 /* ---------- .vis-animasjoner, tellere og forlovelseskonfetti ---------- */
