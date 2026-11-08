@@ -254,26 +254,39 @@ function kart() {
 }
 
 /* ---------- Svar-siden ---------- */
+const TELEFON = { viktoria: "+4740540150", havard: "+4797435692" };
+const SMS_TEKST = {
+  ja: "Hei! Jeg kommer gjerne i bryllupet deres 3. juli 2027 🎉\nNavn: \nAllergier eller andre hensyn: ",
+  nei: "Hei! Jeg kan dessverre ikke komme i bryllupet deres 3. juli 2027.\nNavn: "
+};
+
 function svar() {
   const ja = document.getElementById("svar-ja");
   const nei = document.getElementById("svar-nei");
   if (!ja || !nei) return;
   const jaTekst = document.getElementById("melding-ja");
   const neiTekst = document.getElementById("melding-nei");
+
+  // Ferdig utfylte SMS-lenker. iPhone/Mac bruker "&body=", Android "?body=".
+  const apple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+  document.querySelectorAll("[data-sms]").forEach(a => {
+    const nr = TELEFON[a.dataset.sms];
+    const tekst = encodeURIComponent(SMS_TEKST[a.dataset.svar] || "");
+    a.href = `sms:${nr}${apple ? "&" : "?"}body=${tekst}`;
+  });
+
+  const skjemaKnapp = document.getElementById("skjema-knapp");
+  if (skjemaKnapp) skjemaKnapp.hidden = !LENKER.skjema;
+
   ja.addEventListener("click", () => {
     neiTekst.classList.remove("vises");
     jaTekst.classList.add("vises");
     konfetti();
-    if (LENKER.skjema) window.open(LENKER.skjema, "_blank", "noopener");
   });
   nei.addEventListener("click", () => {
     jaTekst.classList.remove("vises");
     neiTekst.classList.add("vises");
   });
-  const skjemaHint = document.getElementById("skjema-hint");
-  if (skjemaHint) skjemaHint.hidden = !LENKER.skjema;
-  const ingenSkjema = document.getElementById("ingen-skjema");
-  if (ingenSkjema) ingenSkjema.hidden = !!LENKER.skjema;
 }
 
 /* ---------- Konfetti (uten bibliotek) ---------- */

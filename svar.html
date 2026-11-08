@@ -54,12 +54,22 @@
             <button class="knapp fylt stor" type="button" id="svar-ja">Jeg kommer!</button>
             <button class="knapp stor" type="button" id="svar-nei">Kan dessverre ikke</button>
           </div>
-          <p class="svarmelding" id="melding-ja" aria-live="polite">
-            Så gøy! Vi gleder oss til å feire med deg.
-            <span id="skjema-hint" hidden><br>Svarskjemaet åpnes i en ny fane – fyll det ut, så har vi alt vi trenger.</span>
-            <span id="ingen-skjema"><br>Svarskjemaet kommer snart. Send oss gjerne en melding i mellomtiden.</span>
-          </p>
-          <p class="svarmelding" id="melding-nei" aria-live="polite">Så synd! Gi oss gjerne beskjed på telefon, så vi vet det.</p>
+          <div class="svarmelding" id="melding-ja" aria-live="polite">
+            <p>Så gøy! Vi gleder oss til å feire med deg.</p>
+            <p class="liten">Send en melding til en av oss med navnet ditt og eventuelle allergier eller hensyn.</p>
+            <div class="knapper">
+              <a class="knapp fylt" data-sms="viktoria" data-svar="ja" href="sms:+4740540150">Send melding til Viktoria</a>
+              <a class="knapp fylt" data-sms="havard" data-svar="ja" href="sms:+4797435692">Send melding til Håvard</a>
+            </div>
+            <a class="knapp" id="skjema-knapp" data-lenke="skjema" href="#" hidden>Fyll ut svarskjemaet</a>
+          </div>
+          <div class="svarmelding" id="melding-nei" aria-live="polite">
+            <p>Så synd! Gi oss gjerne beskjed, så vi vet det.</p>
+            <div class="knapper">
+              <a class="knapp" data-sms="viktoria" data-svar="nei" href="sms:+4740540150">Send melding til Viktoria</a>
+              <a class="knapp" data-sms="havard" data-svar="nei" href="sms:+4797435692">Send melding til Håvard</a>
+            </div>
+          </div>
 
           <hr class="strek">
           <p>Du kan også svare direkte til oss</p>

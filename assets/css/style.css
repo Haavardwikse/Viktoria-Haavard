@@ -22,6 +22,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 [id] { scroll-margin-top: calc(var(--meny-h) + .5rem); }
 body {
@@ -432,7 +433,10 @@ a.snart { cursor: not-allowed; opacity: .55; }
 /* ---------- Svar ---------- */
 .svarknapper { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.4rem; }
 .svarmelding { display: none; margin-top: 1.6rem; font-size: 1.3rem; }
-.svarmelding.vises { display: block; animation: pop .7s cubic-bezier(.2,1.4,.4,1) both; }
+.svarmelding.vises { display: grid; gap: 1rem; justify-items: center; animation: pop .7s cubic-bezier(.2,1.4,.4,1) both; }
+.svarmelding .liten { font-size: 1.1rem; color: var(--dempet); max-width: 40ch; }
+.svarmelding .knapper { flex-direction: column; align-items: stretch; width: min(100%, 340px); }
+.svarmelding .knapp { letter-spacing: .14em; }
 .telefoner { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
 
 /* ---------- Bunntekst ---------- */
