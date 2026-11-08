@@ -257,6 +257,12 @@ a.snart { cursor: not-allowed; opacity: .55; }
   .galleri button:nth-child(2n) { transform: translateY(2rem); }
 }
 
+/* Bildestripe nederst på forsiden */
+.galleri.stripe { grid-template-columns: repeat(4, 1fr); padding-bottom: 0; }
+.galleri.stripe button:nth-child(n) { transform: none; }
+.galleri.stripe img { aspect-ratio: 3/4; }
+@media (max-width: 700px) { .galleri.stripe { grid-template-columns: repeat(2, 1fr); } }
+
 /* ---------- Lysboks ---------- */
 .lysboks { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; margin: 0; }
 .lysboks::backdrop { background: rgba(26, 26, 22, .92); }
@@ -386,6 +392,13 @@ a.snart { cursor: not-allowed; opacity: .55; }
 .minne-stor .prikk { left: 50%; top: -1.6rem; transform: translateX(-50%); }
 .minne-stor.synlig .prikk { transform: translateX(-50%) scale(1.15); }
 
+.minne-rekke { position: relative; z-index: 2; margin: -1rem 0 4rem; display: grid; gap: 1.6rem; justify-items: center; }
+.minne-rekke .rad { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 3vw, 2.4rem); width: 100%; justify-items: center; }
+.minne-rekke .polaroid { width: min(100%, 270px); padding-bottom: 2.6rem; --skra: -1.7deg; }
+.minne-rekke .polaroid:nth-child(even) { --skra: 1.7deg; }
+.minne-rekke .polaroid:nth-child(3n+2) { margin-top: 2.2rem; }
+.minne-rekke .eyebrow { background: var(--krem); padding: .2rem .8rem; }
+
 .finale { position: relative; z-index: 2; margin-top: 3.5rem; }
 .finale h3 { font-family: var(--skrift); color: var(--salvie); font-size: clamp(3rem, 8vw, 4.8rem); line-height: 1.1; }
 
@@ -402,6 +415,10 @@ a.snart { cursor: not-allowed; opacity: .55; }
   .minne-stor .kort { grid-template-columns: 1fr; }
   .minne-stor .prikk { left: 1rem; transform: translateX(-50%); }
   .finale { margin-left: -2.6rem; }
+  .minne-rekke { margin-left: -2.6rem; }
+  .minne-rekke .rad { grid-template-columns: repeat(2, 1fr); }
+  .minne-rekke .polaroid:nth-child(3n+2) { margin-top: 0; }
+  .minne-rekke .polaroid:nth-child(even) { margin-top: 1.6rem; }
 }
 
 /* ---------- Svar ---------- */
