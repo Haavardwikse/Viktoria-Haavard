@@ -118,7 +118,7 @@ a.snart { cursor: not-allowed; opacity: .55; }
   position: fixed; inset: 0 0 auto 0; z-index: 40;
   height: var(--meny-h);
   color: #fff;
-  text-shadow: 0 1px 8px rgba(0,0,0,.35);
+  text-shadow: 0 1px 3px rgba(0,0,0,.35), 0 1px 12px rgba(0,0,0,.35);
   transition: background .35s, color .35s, box-shadow .35s;
 }
 .toppmeny .rad { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: min(1320px, 100% - 2.5rem); margin-inline: auto; }
@@ -172,26 +172,26 @@ a.snart { cursor: not-allowed; opacity: .55; }
 }
 .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 58%); }
 .hero::before, .hero::after { content: ""; position: absolute; left: 0; right: 0; pointer-events: none; }
-.hero::before { top: 0; height: 42%; background: linear-gradient(rgba(20,22,18,.62), rgba(20,22,18,0)); }
-.hero::after { bottom: 0; height: 38%; background: linear-gradient(rgba(20,22,18,0), rgba(20,22,18,.66)); }
+.hero::before { top: 0; height: 48%; background: linear-gradient(rgba(20,22,18,.7), rgba(20,22,18,.35) 55%, rgba(20,22,18,0)); }
+.hero::after { bottom: 0; height: 42%; background: linear-gradient(rgba(20,22,18,0), rgba(20,22,18,.35) 45%, rgba(20,22,18,.72)); }
 .hero-topp {
   position: absolute; z-index: 2; left: 0; right: 0; top: calc(var(--meny-h) + .4rem);
   display: grid; justify-items: center; gap: .2rem; text-align: center; padding: 0 1rem;
-  text-shadow: 0 2px 14px rgba(0,0,0,.35);
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 18px rgba(0,0,0,.45);
 }
 .hero-navn { font-weight: 500; font-size: clamp(.8rem, 2.6vw, 1.05rem); letter-spacing: .34em; text-transform: uppercase; }
-.hero-dato { font-style: italic; font-weight: 300; font-size: clamp(1.1rem, 3.4vw, 1.5rem); letter-spacing: .12em; }
+.hero-dato { font-style: italic; font-weight: 400; font-size: clamp(1.1rem, 3.4vw, 1.5rem); letter-spacing: .12em; }
 .hero-tittel { font-family: var(--skrift); font-size: clamp(3rem, 11vw, 6.4rem); line-height: 1.1; margin-top: .2rem; }
 .hero-bunn {
   position: absolute; z-index: 2; left: 0; right: 0; bottom: clamp(1.4rem, 4vw, 2.6rem);
   width: min(1320px, 100% - 2.5rem); margin-inline: auto;
   display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem;
-  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 16px rgba(0,0,0,.45);
 }
 .nedtelling { display: flex; gap: clamp(1rem, 3vw, 2rem); }
 .nedtelling div { display: grid; justify-items: center; min-width: 3.2rem; }
 .nedtelling b { font-weight: 300; font-size: clamp(2rem, 6vw, 3rem); line-height: 1; font-variant-numeric: tabular-nums; }
-.nedtelling small { font-weight: 500; font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; margin-top: .45rem; opacity: .9; }
+.nedtelling small { font-weight: 500; font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; margin-top: .45rem; }
 .gift { display: none; font-family: var(--skrift); color: var(--lysgull); font-size: clamp(3.6rem, 12vw, 6.5rem); line-height: 1; }
 .er-gift .nedtelling { display: none; }
 .er-gift .gift { display: block; animation: pop .9s cubic-bezier(.2,1.6,.4,1) both; }
@@ -212,10 +212,10 @@ a.snart { cursor: not-allowed; opacity: .55; }
 }
 @keyframes zoomut { from { transform: scale(1.14); } to { transform: scale(1); } }
 .undertopp::before, .undertopp::after { content: ""; position: absolute; left: 0; right: 0; pointer-events: none; }
-.undertopp::before { top: 0; height: 40%; background: linear-gradient(rgba(20,22,18,.6), rgba(20,22,18,0)); }
-.undertopp::after { bottom: 0; height: 55%; background: linear-gradient(rgba(20,22,18,0), rgba(20,22,18,.65)); }
-.undertopp-tekst { position: absolute; z-index: 2; left: 0; right: 0; bottom: clamp(2rem, 6vw, 3.5rem); display: grid; justify-items: center; gap: .3rem; text-align: center; padding: 0 1rem; text-shadow: 0 2px 14px rgba(0,0,0,.4); }
-.undertopp-tekst .eyebrow { color: #fff; opacity: .92; }
+.undertopp::before { top: 0; height: 40%; background: linear-gradient(rgba(20,22,18,.65), rgba(20,22,18,0)); }
+.undertopp::after { bottom: 0; height: 60%; background: linear-gradient(rgba(20,22,18,0), rgba(20,22,18,.35) 45%, rgba(20,22,18,.74)); }
+.undertopp-tekst { position: absolute; z-index: 2; left: 0; right: 0; bottom: clamp(2rem, 6vw, 3.5rem); display: grid; justify-items: center; gap: .3rem; text-align: center; padding: 0 1rem; text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 18px rgba(0,0,0,.45); }
+.undertopp-tekst .eyebrow { color: #fff; }
 .undertopp h1 { font-family: var(--skrift); font-size: clamp(3rem, 10vw, 5.6rem); line-height: 1.15; }
 .og { font-family: var(--brod); font-style: italic; font-weight: 300; font-size: .6em; color: var(--lysgull); padding: 0 .08em; }
 
@@ -228,18 +228,19 @@ a.snart { cursor: not-allowed; opacity: .55; }
 .bildekort { position: relative; display: block; overflow: hidden; text-decoration: none; color: #fff; aspect-ratio: 4/5; box-shadow: var(--skygge); }
 .bildekort img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); transition: transform 1.2s ease; }
 .bildekort:hover img { transform: scale(1.05); }
-.bildekort::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,22,18,0) 35%, rgba(20,22,18,.72)); }
+.bildekort::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,22,18,0) 30%, rgba(20,22,18,.4) 60%, rgba(20,22,18,.8)); }
+.bildekort .tekst { text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 14px rgba(0,0,0,.35); }
 .bildekort .tekst { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 2rem 1.6rem; display: grid; gap: .3rem; justify-items: center; text-align: center; }
 .bildekort .eyebrow { color: var(--lysgull); }
 .bildekort h3 { font-family: var(--skrift); font-size: clamp(2.3rem, 5vw, 3.2rem); line-height: 1.15; }
-.bildekort p { opacity: .92; }
+.bildekort p { opacity: 1; }
 @media (max-width: 700px) { .bildekort-rad { grid-template-columns: 1fr; } .bildekort { aspect-ratio: 4/4.4; } }
 
 /* ---------- Banner med parallakse ---------- */
 .banner { position: relative; height: clamp(340px, 62vw, 620px); overflow: hidden; color: #fff; }
 .banner > img { position: absolute; left: 0; width: 100%; top: -12%; height: 124%; object-fit: cover; object-position: var(--pos, 50% 50%); will-change: transform; }
-.banner::after { content: ""; position: absolute; inset: 0; background: rgba(20,22,18,.32); }
-.banner .tekst { position: absolute; inset: 0; z-index: 2; display: grid; place-content: center; text-align: center; padding: 1rem; gap: .5rem; text-shadow: 0 2px 16px rgba(0,0,0,.45); }
+.banner::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(20,22,18,.5), rgba(20,22,18,.3) 70%); }
+.banner .tekst { position: absolute; inset: 0; z-index: 2; display: grid; place-content: center; text-align: center; padding: 1rem; gap: .5rem; text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 18px rgba(0,0,0,.5); }
 .banner .tekst .eyebrow { color: #fff; }
 .banner h2 { font-family: var(--skrift); font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1.15; }
 
