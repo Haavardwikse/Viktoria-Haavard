@@ -179,7 +179,7 @@ a.snart { cursor: not-allowed; opacity: .55; }
   display: grid; justify-items: center; gap: .2rem; text-align: center; padding: 0 1rem;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 18px rgba(0,0,0,.45);
 }
-.hero-navn { font-weight: 500; font-size: clamp(.8rem, 2.6vw, 1.05rem); letter-spacing: .34em; text-transform: uppercase; }
+.hero-navn { font-weight: 500; font-size: clamp(1.05rem, 3.8vw, 1.7rem); letter-spacing: .3em; text-transform: uppercase; }
 .hero-dato { font-style: italic; font-weight: 400; font-size: clamp(1.1rem, 3.4vw, 1.5rem); letter-spacing: .12em; }
 .hero-tittel { font-family: var(--skrift); font-size: clamp(3rem, 11vw, 6.4rem); line-height: 1.1; margin-top: .2rem; }
 .hero-bunn {
@@ -216,7 +216,7 @@ a.snart { cursor: not-allowed; opacity: .55; }
 .undertopp::after { bottom: 0; height: 60%; background: linear-gradient(rgba(20,22,18,0), rgba(20,22,18,.35) 45%, rgba(20,22,18,.74)); }
 .undertopp-tekst { position: absolute; z-index: 2; left: 0; right: 0; bottom: clamp(2rem, 6vw, 3.5rem); display: grid; justify-items: center; gap: .3rem; text-align: center; padding: 0 1rem; text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 18px rgba(0,0,0,.45); }
 .undertopp-tekst .eyebrow { color: #fff; }
-.undertopp h1 { font-family: var(--skrift); font-size: clamp(3rem, 10vw, 5.6rem); line-height: 1.15; }
+.undertopp h1 { font-family: var(--skrift); font-size: clamp(3.5rem, 12vw, 6.6rem); line-height: 1.15; }
 .og { font-family: var(--brod); font-style: italic; font-weight: 300; font-size: .6em; color: var(--lysgull); padding: 0 .08em; }
 
 /* ---------- Forside: invitasjon og ringer ---------- */
@@ -239,8 +239,8 @@ a.snart { cursor: not-allowed; opacity: .55; }
 /* ---------- Banner med parallakse ---------- */
 .banner { position: relative; height: clamp(340px, 62vw, 620px); overflow: hidden; color: #fff; }
 .banner > img { position: absolute; left: 0; width: 100%; top: -12%; height: 124%; object-fit: cover; object-position: var(--pos, 50% 50%); will-change: transform; }
-.banner::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(20,22,18,.5), rgba(20,22,18,.3) 70%); }
-.banner .tekst { position: absolute; inset: 0; z-index: 2; display: grid; place-content: center; text-align: center; padding: 1rem; gap: .5rem; text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 18px rgba(0,0,0,.5); }
+.banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,22,18,.12), rgba(20,22,18,.18) 45%, rgba(20,22,18,.72)); }
+.banner .tekst { position: absolute; inset: 0; z-index: 2; display: grid; place-content: end center; padding-bottom: clamp(2rem, 6vw, 4rem) !important; text-align: center; padding: 1rem; gap: .5rem; text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 18px rgba(0,0,0,.5); }
 .banner .tekst .eyebrow { color: #fff; }
 .banner h2 { font-family: var(--skrift); font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1.15; }
 
