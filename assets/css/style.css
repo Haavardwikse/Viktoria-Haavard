@@ -238,12 +238,15 @@ a.snart { cursor: not-allowed; opacity: .55; }
 @media (max-width: 700px) { .bildekort-rad { grid-template-columns: 1fr; } .bildekort { aspect-ratio: 4/4.4; } }
 
 /* ---------- Banner med parallakse ---------- */
-.banner { position: relative; height: clamp(340px, 62vw, 620px); overflow: hidden; color: #fff; }
-.banner > img { position: absolute; left: 0; width: 100%; top: -12%; height: 124%; object-fit: cover; object-position: var(--pos, 50% 50%); will-change: transform; }
+.banner { position: relative; height: clamp(340px, 50vw, 760px); overflow: hidden; color: #fff; }
+.banner > img { position: absolute; left: 0; width: 100%; top: -7%; height: 114%; object-fit: cover; object-position: var(--pos, 50% 50%); will-change: transform; }
 .banner::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(20,22,18,.5), rgba(20,22,18,.3) 70%); }
 .banner .tekst { position: absolute; inset: 0; z-index: 2; display: grid; place-content: center; padding-top: var(--tekst-ned, 1rem) !important; text-align: center; padding: 1rem; gap: .5rem; text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 2px 18px rgba(0,0,0,.5); }
 .banner .tekst .eyebrow { color: #fff; }
 .banner h2 { font-family: var(--skrift); font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1.15; }
+@media (min-width: 1700px) {
+  .banner > img { object-position: var(--pos-bred, var(--pos, 50% 50%)); }
+}
 @media (max-width: 700px) {
   .banner > img { object-position: var(--pos-mobil, var(--pos, 50% 50%)); }
   .banner .tekst { padding-top: var(--tekst-ned-mobil, 1rem) !important; }

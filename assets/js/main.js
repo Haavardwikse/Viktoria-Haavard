@@ -79,8 +79,8 @@ function scrolling() {
         const r = img.parentElement.getBoundingClientRect();
         if (r.bottom < 0 || r.top > h) return;
         const midt = r.top + r.height / 2 - h / 2;
-        const maks = r.height * 0.1;
-        const flytt = Math.max(-maks, Math.min(maks, -midt * 0.12));
+        const maks = r.height * 0.06;
+        const flytt = Math.max(-maks, Math.min(maks, -midt * 0.08));
         img.style.transform = `translate3d(0, ${flytt.toFixed(1)}px, 0)`;
       });
     }
